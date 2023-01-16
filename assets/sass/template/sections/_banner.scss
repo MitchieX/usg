@@ -1,0 +1,54 @@
+.banner_btn {
+  display: inline-block;
+  background-color: $white-color;
+  color: $title-color;
+  line-height: 1;
+  padding: 17px 24px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 500;
+
+  i {
+    margin-left: 10px;
+  }
+
+  &.style2 {
+    background-color: $title-color;
+    color: $white-color;
+  }
+
+  &:hover {
+    background-color: $theme-color;
+    color: $white-color;
+  }
+}
+
+
+.banner_style1 {
+  padding: 60px 40px 60px 40px;  
+  border-radius: 6px;
+  
+  .banner_label {
+    font-size: 13px;
+    line-height: 1;
+    color: $title-color;
+    margin: 0 0 8px 0;
+    display: block;
+  }
+
+  .banner_title {
+    margin: 0 0 5px 0;
+  }
+
+  .banner_text {
+    color: $black-color;
+    margin:  0 0 33px 0;
+  }
+}
+
+
+@include sm {
+  .banner_style1 {
+    padding: 50px 20px 50px 20px;
+  }
+}

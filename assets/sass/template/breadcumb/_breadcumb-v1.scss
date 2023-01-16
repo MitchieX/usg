@@ -1,0 +1,129 @@
+.breadcumb-menu {
+  max-width: 100%;
+  margin: 10px 0 -0.4em 0;
+  padding: 0;
+  list-style-type: none;
+
+  li {
+    display: inline-block;
+    list-style: none;
+    position: relative;
+
+    &:after {
+      content: '.';
+      font-size: 3em;
+      top: -2.5px;
+      position: relative;
+      margin: 0 5px 0 8px;
+      color: $white-color;
+    }
+
+    &:first-child {
+      &:before {
+        content: '\f015';
+        font-family: $icon-font;
+        color: $white-color;
+        font-size: 18px;
+        display: inline-block;
+        margin-right: 10px;
+      }
+    }
+
+
+    &:last-child {
+      padding-right: 0;
+      margin-right: 0;
+
+      &:after {
+        display: none;
+      }
+    }
+
+
+  }
+
+  li,
+  a,
+  span {
+    white-space: normal;
+    word-break: break-word;
+    font-weight: 400;
+    font-size: 16px;
+    color: rgba(#fff, 0.7);
+
+    i {
+      margin-right: 10px;
+      font-size: 0.8rem;
+      position: relative;
+      top: -1px;
+    }
+  }
+
+  a {
+    &:hover {
+      color: $theme-color;
+    }
+  }
+}
+
+
+.breadcumb-title {
+  font-size: 64px;
+  color: $white-color;
+  margin: -0.3em 0;
+}
+
+
+.breadcumb-wrapper {
+  background-color: $title-color;
+  padding: 130px 0;
+}
+
+
+@include xl {
+  .breadcumb-title {
+    font-size: 48px;
+  }
+}
+
+@include lg {
+  .breadcumb-title {
+    font-size: 36px;
+  }
+
+  .breadcumb-wrapper {
+    padding: 60px 0;
+  }
+}
+
+@include md {
+  .breadcumb-wrapper {
+    padding: 70px 0;
+  }
+  .breadcumb-title {
+    font-size: 30px;
+  }
+
+  .breadcumb-menu {
+    li,
+    a,
+    span {
+      font-size: 14px;
+    }
+
+    li:first-child:before {
+      font-size: 16px;
+    }
+  }
+}
+
+
+@include sm {
+  .breadcumb-title {
+    font-size: 26px;
+  }
+
+  .breadcumb-menu {
+    margin-top: 5px;
+  }
+}

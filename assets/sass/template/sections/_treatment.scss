@@ -1,0 +1,186 @@
+.treatment-tab-menu {
+  margin: 0 0 30px 0;
+
+  a,
+  button {
+    display: block;
+    text-align: left;
+    border: none;
+    background-color: #F6F6F6;
+    color: $title-color;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1;
+    width: 100%;
+    padding: 26px 40px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    transition: all ease 0.4s;
+    position: relative;
+
+    i {
+      margin-left: 10px;
+      opacity: 0;
+      right: 20px;
+      color: $title-color;
+      visibility: hidden;
+      position: relative;
+      transition: all ease 0.4s;
+    }
+
+    &:hover,
+    &.active {
+      box-shadow: inset 4px 0px 0px $theme-color;
+      background: rgba(61, 102, 245, 0.06);
+      color: $theme-color;
+
+      i {
+        right: 0;
+        opacity: 1;
+        visibility: visible;
+        color: $theme-color;
+      }
+    }
+  }
+
+  &.style2 {
+    padding: 35px;
+    background-color: $smoke-color;
+    border-radius: 6px;
+
+    a,
+    button {
+      background-color: $white-color;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &:hover {
+        background-color: rgba(61, 102, 245, 0.06);
+      }
+    }
+  }
+}
+
+
+.treatment-box {
+  display: flex;
+  align-items: center;
+  border: 2px solid rgba(#021D35, 0.1);
+  border-radius: 20px;
+  padding: 56px 50px;
+  margin: 0 0 30px 0;
+
+  &__img {
+    margin: 0 50px 0 0;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+
+  &__content {
+    flex: 1;
+  }
+
+  &__name {
+    font-size: 40px;
+    font-weight: 900;
+    margin: -0.3em 0 10px 0;
+  }
+
+  .check-list {
+    margin: 0 0 40px 0;
+  }
+}
+
+
+@include ml {
+  .treatment-box {
+    padding: 40px 40px;
+  }
+
+  .treatment-tab-menu {
+    button {
+      padding: 23.5px 40px;
+    }
+  }
+}
+
+
+@include lg {
+  .treatment-tab-menu {
+    text-align: center;
+
+    button {
+      width: max-content;
+      display: inline-block;
+      margin: 0 4px 12px 4px;
+
+      i {
+        display: none;
+      }
+    }
+
+    &.style2 {
+
+      a,
+      button {
+        font-size: 16px;
+        padding: 20px 20px;
+      }
+    }
+  }
+
+  .treatment-box {
+    &__name {
+      font-size: 36px;
+    }
+
+    .check-list ul {
+      margin: 20px 0 20px 0;
+    }
+  }
+}
+
+
+
+@include md {
+  .treatment-box {
+    display: block;
+
+    &__img {
+      margin: 0 0 30px 0;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &__name {
+      font-size: 30px;
+    }
+  }
+}
+
+
+@include sm {
+  .treatment-tab-menu {
+    button {
+      padding: 16px 20px;
+      font-size: 14px;
+    }
+
+    &.style2 {
+      padding: 35px 20px;
+    }
+  }
+
+  .treatment-box {
+    padding: 45px 20px;
+
+    .check-list li:before {
+      left: 0;
+      top: -2px;
+    }
+  }
+}

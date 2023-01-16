@@ -1,0 +1,141 @@
+.testi-card {
+  position: relative;
+  background-color: $smoke-color;
+  padding: 50px 40px;
+  margin: 0 0 30px 0;
+  border-radius: 6px;
+
+  &__quote {
+    position: absolute;
+    right: 40px;
+    bottom: 60px;
+  }
+
+  &__rating {
+    margin: 0 0 20px 0;
+
+    .star-rating {
+      width: 100px;
+      font-size: 14px;
+    }
+  }
+  
+  &__author {
+    margin: 30px 0 0 0;
+    display: flex;
+    align-items: center;
+  }
+
+  &__avater {
+    width: 56px;
+    height: 56px;
+    margin-right: 10px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__name {
+    font-weight: 500;
+    font-size: 18px;
+    margin: 5px 0 3px 0;
+    line-height: 1;
+  }
+  
+  &__degi {
+    font-size: 14px;
+    line-height: 1;
+  }
+}
+
+.testi-media {
+  &__text {
+    font-size: 26px;
+    line-height: 40px;
+    font-weight: 400;
+    color: $white-color;
+    margin-top: -0.3em;
+  }
+
+  &__avater {
+    width: 76px;
+    height: 76px;
+    margin: 0 auto;
+    padding: 3px;
+    overflow: hidden;
+    background-color: $white-color;
+    border-radius: 50%;
+    transition: all ease 0.4s;
+    transform: scale(0.8);
+    cursor: pointer;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__avaterSlide {
+    max-width: 300px;
+    margin: 20px auto 25px auto;
+  }
+
+  &__name {
+    font-size: 18px;
+    line-height: 1;
+    color: $white-color;
+    margin: 0 0 10px 0;
+  }
+
+  &__degi {
+    font-size: 14px;
+    color: $white-color;
+    line-height: 1;
+    display: block;
+  }
+
+  &__arrow {
+    .slick-arrow {
+      border: 2px solid rgba(#fff, 0.20);
+      background-color: transparent;
+      color: $white-color;
+      --pos-x: 15px;
+  
+      &:hover {
+        color: $white-color;
+        background-color: $theme-color;
+        border-color: $theme-color;
+      }
+    }
+  }
+
+}
+
+
+.slick-center {
+  .testi-media {
+    &__avater {
+      transform: scale(1);
+    }
+  }
+}
+
+@include md {
+  .testi-card {
+    padding: 50px 30px;
+  }
+
+  .testi-media {
+    &__text {
+      font-size: 20px;
+      line-height: 34px;
+    }
+
+    &__avaterSlide {
+      max-width: 300px;
+      margin: 15px auto 20px auto;
+    }
+  }
+}

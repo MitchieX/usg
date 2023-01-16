@@ -1,0 +1,117 @@
+.sec-title {
+  font-size: 50px;
+  font-weight: 900;
+  line-height: 1.2;
+  margin: -0.2em 0 11px 0;
+  
+  &-style2 {
+    margin: -0.2em 0 11px 0;
+    line-height: 1.2;
+  }
+
+  &-style3 {
+    font-size: 64px;
+    line-height: 1.2;
+    margin: -0.2em 0 13px 0;
+  }
+}
+
+.sub-title {
+  font-size: 15px;
+  font-weight: 400;
+  color: $theme-color;
+  position: relative;
+  padding: 0 0 0 42px;
+  display: block;
+  margin: -0.4em 0 15px 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 30px;
+    height: 2px;
+    background-color: currentColor;
+    margin: -1px 0 0 0;
+  }
+}
+
+.sec-text {
+  color: $title-color;
+}
+
+.sec-text-style2 {
+  max-width: 600px;
+}
+
+.inner-title {
+  font-size: 26px;
+  margin: -0.2em 0 8px 0;
+
+  @media (min-width: $ml) {
+    &-style2 {
+      font-size: 40px;
+      line-height: 1.25;
+      margin: 0 0 20px 0;
+    }
+  } 
+
+  &-style3 {
+    font-size: 20px;
+    margin: 0 0 23px 0;
+  }
+}
+
+.sec-btn {
+  margin-bottom: 48px;
+}
+
+.title-area {
+  margin-bottom: calc(var(--section-title-space) - 10px);
+}
+
+
+@include ml {
+  .sec-title {
+    font-size: 42px;
+    line-height: 1.3;
+
+    &-style3 {
+      font-size: 50px;
+      line-height: 1.3;
+    }
+  }
+
+}
+
+
+@include md {
+  .sec-title {
+    font-size: 36px;
+    line-height: 1.3;
+
+    &-style3 {
+      font-size: 42px;
+    }
+  }
+
+  .sec-btn {
+    margin-bottom: 30px;
+  }
+
+  .title-area {
+    margin-bottom: 30px;
+  }
+}
+
+@include sm {
+  .sec-title {
+    font-size: 30px;
+    line-height: 1.3;
+
+    &-style3 {
+      font-size: 36px;
+    }
+  }
+}

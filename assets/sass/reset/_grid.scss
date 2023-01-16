@@ -1,0 +1,37 @@
+@media (min-width: $ml) {
+  .row:not([class*=gx-]):not([class*=g-]) {
+    --bs-gutter-x: 30px;
+  }
+  
+  .gx-60 {
+    --bs-gutter-x: 60px;
+  }
+  
+  .gx-50 {
+    --bs-gutter-x: 50px;
+  }
+  
+  .gx-70 {
+    --bs-gutter-x: 70px;
+  }
+}
+
+.gx-10 {
+  --bs-gutter-x: 10px;
+}
+
+.gx-15 {
+  --bs-gutter-x: 15px;
+}
+
+.gx-20 {
+  --bs-gutter-x: 20px;
+}
+
+.gx-30 {
+  --bs-gutter-x: 30px;
+}
+
+.gy-30 {
+  --bs-gutter-y: 30px;
+}

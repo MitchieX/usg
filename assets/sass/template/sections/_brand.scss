@@ -1,0 +1,19 @@
+.vs-brand-box {
+  width: 100%;
+  height: var(--box-size, 170px);
+  line-height: var(--box-size, 170px);
+  text-align: center;
+  border: 2px solid rgba(2, 29, 53, 0.1);
+  border-radius: 6px;
+  margin-bottom: 30px;
+  transition: all ease 0.4s;
+
+  &:hover {
+    border-color: transparent;
+    box-shadow: 0px 20px 100px rgba(2, 29, 53, 0.2);
+  }
+}
+
+.brand-wrap1 {
+  padding-bottom: 80px;
+}

@@ -1,0 +1,21 @@
+.feature-box {
+  text-align: center;
+  border: 2px solid rgba(#021D35, 0.10);
+  border-radius: 6px;
+  padding: 38px 20px 33px 20px;
+  margin: 0 0 30px 0;
+  
+  &__icon {
+    margin: 0 0 20px 0;
+  }
+
+  &__title {
+    font-weight: 500;
+    margin: 0 0 5px 0;
+  }
+  
+  &__text {
+    margin: 0 0 0 0;
+    font-size: 15px;
+  }
+}

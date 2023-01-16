@@ -1,0 +1,147 @@
+.image-scale-hover {
+  overflow: hidden;
+
+  img {
+    transition: all ease 0.4s;
+    transform: scale(1.001);
+  }
+
+  &:hover {
+    img {
+      transform: scale(1.2);
+    }
+  }
+}
+
+
+
+.z-index-step1 {
+  position: relative;
+  z-index: 4 !important;
+}
+
+.z-index-common {
+  position: relative;
+  z-index: 3;
+}
+
+.z-index-n1 {
+  z-index: -1;
+}
+
+
+.media-body {
+  flex: 1;
+}
+
+.badge {
+  position: absolute;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: inline-block;
+  text-align: center;
+  background-color: $theme-color;
+  color: $white-color;
+  padding: .35em .55em;
+  border-radius: 50%;
+}
+
+.social-links,
+.vs-social {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  li {
+    display: inline-block;
+    margin-right: 9px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  
+  a {
+    display: inline-block;
+    border: 2px solid rgba(#fff, 0.2);
+    width: var(--icon-size, 42px);
+    height: var(--icon-size, 42px);
+    line-height: calc(var(--icon-size, 42px) - 2px);
+    text-align: center;
+    color: rgba(#fff, 0.4);
+    transition: all ease 0.4s;
+    border-radius: 6px;
+
+    &:hover {
+      background-color: $theme-color;
+      color: $white-color;
+      border-color: transparent;
+    }
+  }
+
+  &.social_footer {
+    a {
+      color: $white-color;
+      border-radius: 50%;
+      border: none;
+      line-height: var(--icon-size, 43px);
+      font-size: 15px;
+      margin: 0;
+
+      &:hover {
+        background-color: $theme-color;
+        color: $white-color;
+      }
+    }
+  }
+}
+
+.social-links {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  
+  a {
+    color: $body-color;
+    border-color: rgba(#021D35, 0.10);
+
+    &:hover {
+      background-color: $white-color;
+      color: $title-color;
+      border-color: transparent;
+    }
+  }
+}
+
+.shape-mockup-wrap {
+  position: relative;
+}
+
+.shape-mockup {
+  position: absolute;
+  z-index: -1;
+}
+
+.hover-white:hover {
+  color: $white-color;
+}
+
+.new-label {
+  display: inline-block;
+  font-size: 12px;
+  padding: 4px 7px;
+  line-height: 1;
+  border-radius: 4px;
+  background-color: $error-color;
+  color: $white-color;
+  margin-left: 5px;
+}
+
+@media (min-width: $xl) {
+  .d-xxxl-block {
+    display: block !important;
+  }
+}

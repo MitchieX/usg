@@ -1,0 +1,295 @@
+.comment-respond {
+  margin-bottom: 30px;
+
+  .form-title {
+    margin-top: -0.35em;
+
+    a#cancel-comment-reply-link {
+      font-size: .7em;
+      text-decoration: underline;
+    }
+  }
+
+  .form-control {
+    background-color: $white-color;
+  }
+
+  
+
+  .form-group {
+    margin-bottom: 20px;
+
+    >label {
+      font-size: 16px;
+      font-weight: 500;
+      color: $title-color;
+    }
+  }
+
+  .vs-btn {
+    border-radius: 10px;
+  }
+
+  .blog-inner-title {
+    margin-bottom: 0px;
+  }
+
+  .form-text {
+    margin-bottom: 25px;
+  }
+}
+
+
+.vs-comments-wrap {
+  margin: 60px 0 60px 0;
+
+  .description p:last-child {
+    margin-bottom: 0;
+  }
+
+  .comment-respond {
+    margin: 30px 0;
+  }
+
+  li {
+    margin: 0;
+  }
+
+  .vs-post-comment {
+    position: relative;
+    display: flex;
+    position: relative;
+    border-bottom: 1px solid rgba(2, 29, 53, 0.1);
+    margin: 30px 0 40px 0;
+    padding: 0 0 32px 0;
+  }
+
+  ul.comment-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    ul,
+    ol {
+
+      ul,
+      ol {
+        margin-bottom: 0;
+      }
+    }
+
+  }
+
+  .comment-avater {
+    @include equal-size(60px);
+    margin-right: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .comment-content {
+    flex: 1;
+    margin-top: -5px;
+    position: relative;
+  }
+  
+  .commented-on {
+    font-size: 14px;
+    display: inline-block;
+    font-weight: 500;
+    color: $body-color;
+    font-family: $title-font;
+    
+    i {
+      margin-right: 7px;
+      font-size: 0.9rem;
+    }
+  }
+  
+  .name {
+    display: inline-block;
+    margin: 0 10px 10px 0;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .comment-top {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .text {
+    margin-bottom: 7px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .children {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    margin-left: 70px;
+  }
+
+  .replay-btn {
+    font-weight: 500;
+    font-family: $title-font;
+    font-size: 14px;
+    color: $body-color;
+    margin-top: 10px;
+    display: inline-block;
+
+    i {
+      margin-right: 7px;
+    }
+
+    &:hover {
+      color: $theme-color;
+    }
+  }
+
+  .star-rating {
+    font-size: 12px;
+    margin: 3px 0 5px 0;
+    width: 80px;
+  }
+
+}
+
+.woocommerce-Reviews {
+  .vs-comments-wrap {
+    margin: 0 0 0 0;
+  }
+
+  .inner-title-style3 {
+    margin-bottom: 33px;
+  }
+
+  .name {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .commented-on {
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  .vs-post-comment {
+    margin: 30px 0 30px 0;
+    padding: 0 0 23px 0;
+  }
+
+  .vs-comment-item {
+    &:last-child {
+      .vs-post-comment {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+    }
+  }
+
+  .vs-comment-form {
+    margin: 35px 0 30px 0;
+
+    h3,
+    .inner-title-style3 {
+      font-size: 22px;
+      margin-bottom: 5px;
+    }
+
+    .form-text {
+      border-bottom: 1px solid rgba(2, 29, 53, 0.1);
+      padding-bottom: 2px;
+      margin: 0 0 20px 0;
+    }
+
+    .stars {
+      margin-bottom: 15px;
+    }
+
+    label {
+      font-size: 16px;
+      font-weight: 500;
+      color: $title-color;
+      margin-bottom: 5px;
+    }
+
+    input {
+      ~ label {
+        font-weight: 400;
+        color: #727476;
+        margin-bottom: 0;
+      }
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+
+.vs-comments-wrap.vs-comment-form {
+  margin: 0;
+}
+
+
+@include lg {
+  .vs-comments-wrap {
+    .children {
+      margin-left: 40px;
+    }
+  }
+}
+
+
+@include md {
+  .vs-comments-wrap {    
+    .vs-post-comment {
+      display: block;
+    }
+
+    .comment-top {
+      display: block;
+    }
+
+    .comment-avater {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+
+    .children {
+      margin-left: 40px;
+    }
+
+    .star-rating {
+      font-size: 12px;
+      margin: 3px 0 9px 0;
+      width: 80px;
+    }
+
+
+  }
+
+  .woocommerce-Reviews .vs-comment-form input~label:before {
+    top: 5.5px;
+  }
+  
+}
+
+
+@include sm {
+  .vs-comments-wrap {
+    .children {
+      margin-left: 30px;
+    }
+  }
+}

@@ -1,0 +1,185 @@
+.vs-accordion {
+  .accordion-button {
+    border: none;
+    background-color: transparent;
+
+    &:focus {
+      border-color: transparent;
+      background-color: transparent;
+      box-shadow: none;
+    }
+  }
+
+  .accordion-collapse {
+    border: none;
+  }
+}
+
+.accordion-style1 {
+  .accordion-item {
+    background-color: $smoke-color;
+    margin: 0 0 30px 0;
+    border: none;
+  }
+
+  .accordion-button {
+    font-size: 18px;
+    font-weight: 500;
+    color: $title-color;
+    padding: 23px 30px 23px 30px;
+    text-align: left;
+    box-shadow: none;
+
+    &:after {
+      content: '\f067';
+      font-family: $icon-font;
+      border: none;
+      width: auto;
+      height: auto;
+      background-image: none;
+      font-size: 22px;
+      font-weight: 300;
+      color: $theme-color;
+      padding-left: 10px;
+      transform: none !important;
+      text-align: center;
+    }
+
+    &:not(.collapsed) {
+      &:after {
+        content: '\f068';
+      }
+    }
+  }
+
+  .accordion-body {
+    padding: 0 40px 8px 30px;
+
+    p {
+      color: $title-color;
+      
+      &:first-child {
+        margin-top: -0.3em;
+      }
+    }
+  }
+}
+
+.accordion-style2 {
+
+  .accordion-item {
+    background-color: $smoke-color;
+    margin-bottom: 30px;
+    padding-bottom: 17px;
+    border: none;
+    border-radius: 6px;
+    transition: all ease 0.3s;
+
+    &.active {
+      background-color: $white-color;
+      box-shadow: 0px 10px 50px 0px rgb(26, 46, 85, 0.10);
+    }
+  }
+
+  .accordion-button {
+    padding: 27px 30px 10px 30px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    color: $title-color;
+    box-shadow: none;
+
+    &:after {
+      content: '\f067';
+      font-family: $icon-font;
+      font-size: 18px;
+      background-image: none;
+      font-size: 16px;
+      font-weight: 300;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      border-radius: 50%;
+      background-color: $white-color;
+      color: $theme-color;
+      transform: none;
+      transition: all ease 0.4s;
+      text-align: center;
+    }
+
+    &:not(.collapsed) {
+      color: $theme-color;
+
+      &:after {
+        content: '\f068';
+        background-color: #EAEEFF;
+      }
+    }
+  }
+
+  .accordion-body {
+    padding: 0 60px 0 30px;
+  }
+
+  &.white-style {
+    .accordion-item {
+      background-color: $white-color;
+    }
+
+    .accordion-button {
+      &:after {
+        background-color: #EAEEFF;
+      }
+    }
+  }
+}
+
+.accordion-menu {
+  background-color: $smoke-color;
+  padding: 30px 0 45px 0;
+  border-radius: 6px;
+  display: block;
+  position: relative;
+
+  button {
+    display: block;
+    border: none;
+    border-left: 3px solid transparent;
+    background-color: transparent;
+    position: relative;
+    width: max-content;
+    padding: 7px 20px 7px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    color: $body-color;
+    transition: all ease 0.4s;
+
+    &.active,
+    &:hover {
+      color: $theme-color;
+      border-left-color: $theme-color;
+    }
+  }
+}
+
+
+@include sm {
+  .accordion-style1 {
+    .accordion-button {
+      font-size: 16px;
+      padding: 23px 20px 23px 20px;
+    }
+
+    .accordion-body {
+      padding: 0 20px 8px 20px;
+    }
+  }
+
+  .accordion-style2 {
+    .accordion-button {
+      padding: 24px 30px 7px 30px;
+      line-height: 1.6;
+    }
+  }
+
+}

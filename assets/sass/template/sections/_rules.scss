@@ -1,0 +1,59 @@
+.rule-box {
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-color: $white-color;
+  margin: 12px 0 30px 0;
+  padding: 25px 30px 25px 30px;
+  box-shadow: 0px 4px 100px rgba(2, 29, 53, 0.1);
+  border-radius: 6px;
+  
+  &__marker {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    margin: -12px 0 0 -12px;
+    
+    i {
+      width: 24px;
+      height: 24px;
+      line-height: 24px;
+      font-size: 14px;
+      background-color: #3DCA93;
+      color: $white-color;
+      display: inline-block;
+      text-align: center;
+      border-radius: 50%;
+
+      &.fa-times {
+        background-color: #F06367;
+      }
+    }
+  }
+
+  &__icon {
+    border: 2px solid rgba(61, 102, 245, 0.1);
+    width: var(--icon-size, 70px);
+    height: var(--icon-size, 70px);
+    line-height: calc(var(--icon-size, 70px) - 2px);
+    text-align: center;
+    margin: 0 15px 0 0;
+    border-radius: 50%;
+  }
+
+  &__title {
+    font-size: 16px;
+    line-height: 1.2;
+    margin: 0;
+    flex: 1;
+  }
+}
+
+
+@include md {
+  .rule-box {
+    &__title {
+      line-height: 1.5;
+    }
+  }
+} 
